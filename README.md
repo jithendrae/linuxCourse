@@ -24,9 +24,9 @@ This location contains other config fies like AltLog FSCCharset MinUID NoAnonymo
 - Note: **anon** is the user name I added and not refers to the usual anonymous user which may pre exist in some servers
 
 Upon file upload, if the newly uploaded file name conflicts with an earlier existing file in the user's directory ``/home/ftpusers/anon`` the ftp server renames the file as follows:
-Old file existing in user directory : tar.gz
-Newly Uploaded file name: tar.gz
-New File then saved as tar.gz.1 and so on ...
+- Old file existing in user directory : tar.gz
+- Newly Uploaded file name: tar.gz
+- New File then saved as tar.gz.1 and so on ...
 
 ## Shell Scripting Assignment 2
 
