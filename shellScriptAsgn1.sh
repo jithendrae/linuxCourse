@@ -1,23 +1,9 @@
 #!/bin/bash
 
-#Finding list of files that were modified in the last 24 hrs
+#Finding list of files that were modified in the last 24 hrs with size <256kb
+#and saving the filenames to an "output" file
 
-find ~ 2>/dev/null -mtime 0 > temp
-
-#Read each filename from 'temp' to verify if file size < 256kb 
-#and save to 'output' file
-
-while read line
-do
-if [ -f $line ]
-then
-fsize_kb=$( du -k $line | cut -f1)
-if [ $fsize_kb -lt 256 ]
-then 
-echo $line >> output
-fi
-fi
-done < temp
+find ~ -mtime 0 -size -256k 2>/dev/null > output
 
 #Compressing each file (-T option reads each line from the given file )
 #and archiving to a tar ball 
