@@ -24,9 +24,9 @@ This location contains other config fies like AltLog FSCCharset MinUID NoAnonymo
 - Note: **anon** is the user name I added and not refers to the usual anonymous user which may pre exist in some servers
 
 Upon file upload, if the newly uploaded file name conflicts with an earlier existing file in the user's directory ``/home/ftpusers/anon`` the ftp server renames the file as follows:
-Old file existing in user directory : tar.gz
-Newly Uploaded file name: tar.gz
-New File then saved as tar.gz.1 and so on ...
+- Old file existing in user directory : tar.gz
+- Newly Uploaded file name: tar.gz
+- New File then saved as tar.gz.1 and so on ...
 
 ## Shell Scripting Assignment 2
 
@@ -34,4 +34,8 @@ Write a password checker script to test against the following parameters
 - Minimum 10 characters
 - Atleast one number and one special character (from @, *, &, %, $)
 
+**Assignment 2:**
+`shellScriptAsgn2.sh` is a bash script file that reads string input as user's password and checks for the above 2 conditions. If the conditions are met the program exits otherwise, it repeatedly requests user to type correct string to match the given specification.
 
+* The program checks for character length by using the `${#string}` notation.
+* In order to check for at least one number it uses grep pattern `[0-9]+` and for special character `[@*&%$]+`
